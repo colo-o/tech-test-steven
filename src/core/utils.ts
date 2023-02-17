@@ -11,3 +11,18 @@ export const groupMoviesByCategory = (movies: MovieEntity[] | undefined) => {
   return moviesMap;
 };
  
+export const sortMoviesByCategory = (movies: MovieEntity[] | undefined) => {
+  return (movies || []).sort((currentValue, nextValue) => {
+    const currentCategory = currentValue.category.toUpperCase();
+    const nextCategory = nextValue.category.toUpperCase();
+
+    if (currentCategory < nextCategory) {
+      return -1;
+    }
+    if (currentCategory > nextCategory) {
+      return 1;
+    }
+
+    return 0;
+  });
+}

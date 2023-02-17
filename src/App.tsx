@@ -1,5 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import MoviesProvider from 'context/MoviesContext';
+
 const queryClient = new QueryClient();
 
 import Home from 'view/Home';
@@ -7,7 +9,9 @@ import Home from 'view/Home';
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />
+      <MoviesProvider>
+        <Home />
+      </MoviesProvider>
     </QueryClientProvider>
   );
 }

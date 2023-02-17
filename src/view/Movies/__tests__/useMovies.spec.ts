@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import useMovies from 'view/Home/useMovies';
+import useMovies from 'view/Movies/useMovies';
 
 import TestProviders from 'test/TestProviders';
 import { generateMovieList } from 'mocks/movies';
