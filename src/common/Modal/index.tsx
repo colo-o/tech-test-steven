@@ -7,7 +7,9 @@ type ModalProps = {
   onCloseModal: (flag: boolean) => void;
 };
 
-const portalDom = document.getElementById('portal');
+const portalDom =
+  document.getElementById('portal') ||
+  document.body.appendChild(document.createElement('div'));
 
 const Modal = ({ children, onCloseModal }: ModalProps) => {
   const [outterProps] = useSpring(
@@ -42,7 +44,7 @@ const Modal = ({ children, onCloseModal }: ModalProps) => {
   }
 
   return createPortal(
-    <animated.div style={outterProps}>
+    <animated.div style={outterProps} data-testid="modal">
       <div
         onClick={handleOnCloseModal}
         className="w-[100vw] h-[100vh] bg-gradient-to-t from-bgDark fixed top-0 left-0 z-10 flex items-end justify-end"

@@ -4,12 +4,12 @@ import useMovies from 'view/Movies/useMovies';
 
 import TestProviders from 'test/TestProviders';
 import { generateMovieList } from 'mocks/movies';
-import { extractCategoriesFromMovies } from 'core/utils';
+import { groupMoviesByCategory } from 'core/utils';
 
 describe('[HOOK]: useMovie Hook', () => {
   it('[useMovie] Sucessful hook response', async () => {
     const movieStub = generateMovieList(10, 'staticInfo');
-    const categoriesStub = extractCategoriesFromMovies(movieStub);
+    const groupedStub = groupMoviesByCategory(movieStub);
 
     const { result, waitFor } = renderHook(useMovies, { wrapper: TestProviders });
 
@@ -19,7 +19,6 @@ describe('[HOOK]: useMovie Hook', () => {
       expect(result.current.isLoading).toBe(false);
     });
 
-    expect(result.current.movies).toStrictEqual(movieStub);
-    expect(result.current.categories).toStrictEqual(categoriesStub);
+    expect(result.current.movies).toStrictEqual(groupedStub);
   });
 });

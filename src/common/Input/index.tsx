@@ -27,6 +27,7 @@ const Input = forwardRef<InputRef, InputProps>(
         placeholder={placeholder}
         onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event)}
         name={name}
+        aria-label={name}
         className={inputClassName}
       />
     );

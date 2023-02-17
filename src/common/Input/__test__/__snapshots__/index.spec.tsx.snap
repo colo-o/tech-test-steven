@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INPUT] Should render a input value when use types something 1`] = `
+<input
+  aria-label="input"
+  class="undefined bg-darkGray border-none rounded-full px-8 py-4 text-white caret-primary w-full shadow-lg shadow-bgDark focus:outline-none"
+  name="input"
+  type="text"
+  value="Hello world"
+/>
+`;

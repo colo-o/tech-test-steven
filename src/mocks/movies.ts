@@ -10,7 +10,7 @@ const movieBuilder = build<MovieEntity>('Movie', {
     photoUrL: perBuild(() => faker.image.imageUrl()),
     id: perBuild(() => faker.random.words()),
     category: perBuild(() => faker.random.word()),
-    title: 'Movie Title',
+    title: perBuild(() => faker.random.word()),
   },
   traits: {
     staticInfo: {
