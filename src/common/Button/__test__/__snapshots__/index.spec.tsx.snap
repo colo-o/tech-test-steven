@@ -2,7 +2,7 @@
 
 exports[`[BUTTON] Should display a disabled button 1`] = `
 <button
-  class="undefined bg-primary border-2 border-primary rounded-lg px-4 py-2 text-white font-medium box-border cursor-pointer shadow-lg shadow-primary/30 ease-out duration-700 disabled:bg-transparent disabled:border-gray disabled:text-gray disabled:cursor-not-allowed disabled:shadow-none"
+  class="undefined bg-primary border-2 border-primary rounded-lg px-4 py-2 text-base md:text-lg text-white font-medium box-border cursor-pointer shadow-lg shadow-primary/30 ease-out duration-700 disabled:bg-transparent disabled:border-gray disabled:text-gray disabled:cursor-not-allowed disabled:shadow-none"
   disabled=""
 >
   Hello world
@@ -11,7 +11,7 @@ exports[`[BUTTON] Should display a disabled button 1`] = `
 
 exports[`[BUTTON] Should trigger onClick action 1`] = `
 <button
-  class="undefined bg-primary border-2 border-primary rounded-lg px-4 py-2 text-white font-medium box-border cursor-pointer shadow-lg shadow-primary/30 ease-out duration-700"
+  class="undefined bg-primary border-2 border-primary rounded-lg px-4 py-2 text-base md:text-lg text-white font-medium box-border cursor-pointer shadow-lg shadow-primary/30 ease-out duration-700"
 >
   Hello world
 </button>

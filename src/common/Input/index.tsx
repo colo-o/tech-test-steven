@@ -15,7 +15,7 @@ type InputRef = HTMLInputElement | null;
 const Input = forwardRef<InputRef, InputProps>(
   ({ value, onChange, name, placeholder, type, className }, ref) => {
     const inputClassName = classNames(
-      `${className} bg-darkGray border-none rounded-full px-8 py-4 text-white caret-primary w-full shadow-lg shadow-bgDark focus:outline-none`,
+      `${className} bg-darkGray border-none rounded-full px-8 py-4 text-white caret-primary w-full shadow-lg shadow-bgDark focus:outline-none text-base md:text-lg`,
       {}
     );
 

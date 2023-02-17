@@ -47,7 +47,7 @@ const Modal = ({ children, onCloseModal }: ModalProps) => {
     <animated.div style={outterProps} data-testid="modal">
       <div
         onClick={handleOnCloseModal}
-        className="w-[100vw] h-[100vh] bg-gradient-to-t from-bgDark fixed top-0 left-0 z-10 flex items-end justify-end"
+        className="w-[100vw] h-[100vh] bg-gradient-to-t from-bgDark fixed top-0 left-0 z-10 flex items-end justify-center"
       >
         <animated.div style={innerProps}>{children}</animated.div>
       </div>

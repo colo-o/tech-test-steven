@@ -12,8 +12,10 @@ const MovieList = ({ movieList, category }: MovieListProps) => {
 
   return (
     <>
-      <h2 className="col-span-2 text-2xl font-medium my-4">{category}</h2>
-      <ul className="grid grid-flow-col overflow-x-auto gap-4 w-screen h-[250px] category">
+      <h2 className="col-span-2 text-2xl md:text-3xl font-medium my-4 md:my-6">
+        {category}
+      </h2>
+      <ul className="grid grid-flow-col overflow-x-auto gap-4 w-screen h-[250px] md:h-[340px] category">
         {movieList.map((movie, idx) => (
           <MovieCard
             movie={movie}

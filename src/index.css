@@ -16,9 +16,7 @@ code {
     -moz-osx-font-smoothing: grayscale;
     padding: 0 25px;
     box-sizing: border-box;
-  }
-}
 
-.category > li:last-child {
-  margin-right: 60px;
+    @apply sm:px-16 md:px-28;
+  }
 }

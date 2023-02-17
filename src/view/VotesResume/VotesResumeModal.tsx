@@ -11,18 +11,20 @@ const VotesResumeModal = ({
   onCloseModal,
 }: VotesResumeModalProps) => {
   return (
-    <div className="w-[100vw] min-h-[35vh] px-6 py-6 bg-bgDark rounded-t-2xl shadow-2xl shadow-gray flex flex-col">
-      <h3 className="text-xl font-medium text-primary mb-4 text-center">
+    <div className="w-[100vw] md:w-[65vw] xl:w-[45vw] min-h-[35vh] px-6 py-6 md:py-6 md:px-10 bg-bgDark rounded-t-2xl shadow-2xl shadow-bgDark flex flex-col">
+      <h3 className="text-3xl font-medium text-primary mb-4 md:mb-6 text-center">
         Votes Submitted
       </h3>
-      <h5 className="mb-2">Your Votes:</h5>
+      <h5 className="mb-2 md:mb-4 md:text-2xl">Your Votes:</h5>
       <ul className="mb-6">
         {Object.values(selectedMovies).map(movie => (
           <li
             key={movie.id}
-            className="p-2 bg-softBgDark rounded-lg my-2 shadow-lg shadow-bgDark border-l-2 border-l-primary"
+            className="p-2 md:p-4 bg-softBgDark rounded-lg my-2 md:my-4 shadow-lg shadow-bgDark border-l-3 border-l-primary md:border-l-4 "
           >
-            <p className="text-sm">{movie.title + ' - ' + movie.category}</p>
+            <p className="text-sm md:text-xl">
+              {movie.title + ' - ' + movie.category}
+            </p>
           </li>
         ))}
       </ul>
