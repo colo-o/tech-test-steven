@@ -11,13 +11,15 @@ type MoviesContextShape = {
   movies?: Movies;
   selectedMovies?: SelectedMovies;
   selectMovie: (movie: MovieEntity) => void;
+  resetSelectedMovies: () => void;
 }
 
 export const MoviesContext = createContext<MoviesContextShape>({
   isLoading: true,
   movies: {},
   selectedMovies: {},
-  selectMovie: () => null
+  selectMovie: () => null,
+  resetSelectedMovies: () => null,
 });
 
 type MoviesProviderProps = {
@@ -40,7 +42,11 @@ const MoviesProvider = ({ children }: MoviesProviderProps) => {
     });
   }, [])
 
-  return <MoviesContext.Provider value={{ isLoading, movies, selectedMovies, selectMovie }}>{children}</MoviesContext.Provider>
+  const resetSelectedMovies = () => {
+    setSelectedMovies({});
+  };
+
+  return <MoviesContext.Provider value={{ isLoading, movies, selectedMovies, selectMovie, resetSelectedMovies }}>{children}</MoviesContext.Provider>
 }
 
 export default MoviesProvider;
