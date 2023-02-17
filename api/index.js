@@ -1,5 +1,5 @@
 const express = require('express');
-var cors = require('cors')
+var cors = require('cors');
 
 const app = express();
 
@@ -86,8 +86,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'Anthony Hopkins for The Father',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/father_ver3.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/father_ver3.jpg',
         id: 'anthony-hopkins',
         category: 'Best Actor',
       },
@@ -141,8 +140,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'Meryl Streep for The Prom',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/prom_ver2.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/prom_ver2.jpg',
         id: 'meryl-streep',
         category: 'Best Actress',
       },
@@ -170,8 +168,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'Stanley Tucci for Supernova',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/supernova.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/supernova.jpg',
         id: 'stanley-tucci',
         category: 'Best Supporting Actor',
       },
@@ -184,8 +181,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'Olivia Colman for The Father',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/father_ver3.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/father_ver3.jpg',
         id: 'olivia-coleman',
         category: 'Best Supporting Actress',
       },
@@ -224,8 +220,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'Tenet',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/tenet_ver7.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/tenet_ver7.jpg',
         id: 'tenet',
         category: 'Best Visual Effects',
       },
@@ -238,8 +233,7 @@ const generateMoviesData = () => {
       },
       {
         title: 'The Invisible Man',
-        photoUrL:
-          'https://variety.com/wp-content/uploads/2020/12/invisible_man.jpg',
+        photoUrL: 'https://variety.com/wp-content/uploads/2020/12/invisible_man.jpg',
         id: 'the-invisible-man',
         category: 'Best Visual Effects',
       },

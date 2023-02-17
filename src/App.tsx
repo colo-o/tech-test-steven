@@ -5,12 +5,15 @@ import MoviesProvider from 'context/MoviesContext';
 const queryClient = new QueryClient();
 
 import Home from 'view/Home';
+import SearchMoviesProvider from 'context/SearchMoviesContext';
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MoviesProvider>
-        <Home />
+        <SearchMoviesProvider>
+          <Home />
+        </SearchMoviesProvider>
       </MoviesProvider>
     </QueryClientProvider>
   );

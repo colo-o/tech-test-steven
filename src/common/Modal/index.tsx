@@ -35,16 +35,18 @@ const Modal = ({ children, onCloseModal }: ModalProps) => {
 
   function handleOnCloseModal(ev: MouseEvent<HTMLDivElement>) {
     if (ev.target === ev.currentTarget) {
-
       onCloseModal(false);
     } else {
-        ev.stopPropagation();
+      ev.stopPropagation();
     }
-} 
+  }
 
   return createPortal(
-    <animated.div style={outterProps} >
-      <div onClick={handleOnCloseModal} className="w-[100vw] h-[100vh] bg-gradient-to-t from-bgDark fixed top-0 left-0 z-10 flex items-end justify-end">
+    <animated.div style={outterProps}>
+      <div
+        onClick={handleOnCloseModal}
+        className="w-[100vw] h-[100vh] bg-gradient-to-t from-bgDark fixed top-0 left-0 z-10 flex items-end justify-end"
+      >
         <animated.div style={innerProps}>{children}</animated.div>
       </div>
     </animated.div>,

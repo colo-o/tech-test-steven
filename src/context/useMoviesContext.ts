@@ -5,6 +5,6 @@ const useMoviesContext = () => {
   const moviesContextValue = useContext(MoviesContext);
 
   return moviesContextValue;
-}
+};
 
 export default useMoviesContext;

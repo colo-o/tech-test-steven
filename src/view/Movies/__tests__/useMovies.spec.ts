@@ -12,14 +12,14 @@ describe('[HOOK]: useMovie Hook', () => {
     const categoriesStub = extractCategoriesFromMovies(movieStub);
 
     const { result, waitFor } = renderHook(useMovies, { wrapper: TestProviders });
-    
+
     expect(result.current.isLoading).toBe(true);
-    
+
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false);
     });
 
     expect(result.current.movies).toStrictEqual(movieStub);
     expect(result.current.categories).toStrictEqual(categoriesStub);
-  })
-})
+  });
+});

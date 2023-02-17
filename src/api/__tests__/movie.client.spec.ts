@@ -21,9 +21,7 @@ describe('[API] Movie Client', () => {
 
   it('[500] Error movies response', async () => {
     server.use(
-      rest.get(new RegExp('/movies'), async (_, res, ctx) =>
-        res(ctx.status(500))
-      )
+      rest.get(new RegExp('/movies'), async (_, res, ctx) => res(ctx.status(500)))
     );
 
     try {
