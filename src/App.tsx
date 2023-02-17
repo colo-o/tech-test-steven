@@ -7,7 +7,7 @@ import Home from 'view/Home';
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />;
+      <Home />
     </QueryClientProvider>
   );
 }

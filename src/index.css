@@ -11,10 +11,15 @@ code {
   body {
     margin: 0;
     background-color: theme(colors.bgDark);
-    color: theme(colors.white);
+    color: theme(colors.light);
     font-family: theme(fontFamily.sans);
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0 25px;
+    box-sizing: border-box;
   }
+}
+
+.category > li:last-child {
+  margin-right: 60px;
 }

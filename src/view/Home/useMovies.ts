@@ -1,26 +1,25 @@
 import { useQuery } from 'react-query'
  
 import MovieClient from 'api/movie.client';
-import { MovieEntity, CategoryEntity } from 'api/movie.client.types';
-import { extractCategoriesFromMovies } from 'core/utils';
+import { MovieEntity } from 'api/movie.client.types';
+import { groupMoviesByCategory } from 'core/utils';
+import { Movies } from 'core/types';
 
 type UseMoviesResult = {
   isLoading: boolean;
   isError: boolean;
-  movies?: MovieEntity[];
-  categories?: CategoryEntity[];
+  movies?: Movies;
 }
 
 const useMovies = (): UseMoviesResult => {
   const { isLoading, isError, data } = useQuery<MovieEntity[]>('movies', () => MovieClient.getMovies())
 
-  const categories = extractCategoriesFromMovies(data);
+  const mappedMovies = groupMoviesByCategory(data);
 
   return {
     isLoading,
     isError,
-    movies: data,
-    categories,
+    movies: mappedMovies,
   }
 }
 

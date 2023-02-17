@@ -13,7 +13,9 @@ module.exports = {
       },
       colors: {
         'bgDark': '#18181b',
-        'white': '#fafaf9',
+        'primary': '#ef4444',
+        'white': '#fee2e2',
+        'light': '#fef2f2',
         'purple': '#7e5bef',
         'pink': '#ff49db',
         'orange': '#ff7849',
